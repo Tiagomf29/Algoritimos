@@ -22,8 +22,6 @@ public class EncontreMaiorSubstring {
      	  nome1 = (nome1.length() > 50 ? nome1.substring(1,50) : nome1).replaceAll("[^a-zA-Z ]", "");
      	  nome2 = (nome2.length() > 50 ? nome2.substring(1,50) : nome2).replaceAll("[^a-zA-Z ]", "");
      	  
-     	  System.out.println(nome1);
-     	  
      	  for(int i=0; i < nome1.length();i++) {
 		    if(variavel.equals("")) {
 		 	  variavel = String.valueOf(nome1.charAt(i));
@@ -32,27 +30,27 @@ public class EncontreMaiorSubstring {
     	 	  variavel = variavel+String.valueOf(nome1.charAt(i));
 		 	}		 				 			
      		if(nome2.contains(variavel)) {		 					         		 				
-	          	if(vlr < variavel.length()){
-	          	  vlr = variavel.length();
-	          	}	 				
+	          if(vlr < variavel.length()){
+	            vlr = variavel.length();
+	          }	 				
  		   }else
 		   {		 			  		 			  		 			  		 			  
 		     if(variavel.length() > 1) {
 		       i--;		 				  		 				  
 		     }
 		     variavel = "";
-		     }		 					 				 				 				 		
+		   }		 					 				 				 				 		
 		 				 			
-		   }
+		 }
 		 			 			 	
-		   resultadoFinal.add(vlr);
-		   variavel = "";
-		   vlr = 0;		
-		}
+		 resultadoFinal.add(vlr);
+		 variavel = "";
+		 vlr = 0;		
+	  }
        
-		for(int a : resultadoFinal) {
-			System.out.println(a);
-		}
+	  for(int a : resultadoFinal) {
+	    System.out.println(a);
+	  }
 		    
 	}
 
